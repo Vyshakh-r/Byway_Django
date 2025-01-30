@@ -1,0 +1,521 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="icon" type="image/x-icon" href="{% static './images/logo.svg' %}">
+    <link rel="stylesheet" href="{% static './css/style.css' %}">
+    <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" 
+    rel="stylesheet"
+  >
+</head>
+<body>
+  <section id="Wrapper">
+    <section class="Container">
+        <section class="header">
+            <div class="left">
+                <a href="./home.html" class="logo">
+                    <img src="{% static './images/logo.svg' %}" alt="Logo">
+                    <h6>Byway</h6>
+                </a>
+            </div>
+            <div class="right">
+                <a href="">
+                   <img src="{% static './images/wishlist.svg' %}" alt="">
+                </a>
+                <a href="" class="">
+                    <img src="{% static './images/cart.svg' %}" alt="cart">
+                </a>
+                <a href="" class="">
+                    <img src="{% static './images/bell.svg' %}" alt="">
+                </a>
+                <a href="" class="J-Bg">
+                    J
+                </a>
+            </div>
+        </section>
+        <section class="Spotlight">
+            <div class="left">
+                <div class="Top">
+                    <a href="">
+                    <span>Home</span>
+                    <img src="{% static './images/short-arrow-right-black.svg' %}" alt="">
+                    <span>Categories</span>
+                    <img src="{% static './images/short-arrow-right-black.svg' %}" alt="">
+                    <span class="Diff">Introduction to User Experience Design</span>
+                    </a>
+                </div>
+                {% for course in courses %}
+                <h1>{{ course.Title }}</h1>
+                <p>{{ course.description }}</p>
+                
+
+                 <div class="Bottom">
+                    <span class="Rating">4.6 </span>
+                    <img src="{% static './images/Rating.png' %}" alt="5star-Rating">
+                    <span >({{ course.rating }} rating)</span>
+                    <span>{{ course.duration }}.{{ course.lectures }}. All levels</span>
+                 </div>  
+                 <div class="Author">
+                    <img src="{{ course.autherImg.url }}" alt="">
+                    <span>Created by</span>
+                    <a href="">{{ course.auther }}</a>
+                 </div>
+                 <div class="Language">
+                    <img src="{% static './images/globe-02.svg' %}" alt="Language image">
+                    <span>{{ course.language }}</span>
+                 </div>
+                
+            </div>
+            <div class="right">
+                <img src="{{ course.thumbnailImg.url }}" alt="">
+                <div class="Price" data-ogprice="{{ course.Ogprice|floatformat:2 }}" data-offprice="{{ course.Offprice }}">
+                    
+                    <h3 id="finalPrice"></h3>
+                    <h5 > ${{ course.Ogprice }}</h5>
+                    <h4 >{{ course.Offprice }}Off</h4>
+                </div>
+                {% endfor %}
+                <div class="Spotlight-Button">
+                    <a href="" class="spotlightButton">Add To Cart</a>
+                    <a href="" class="spotlightButton">Buy Now</a>
+                </div>
+             
+                <div class="Share">
+                    <p>Share</p>
+                    <a href="https://www.facebook.com"><img src="{% static './images/image 3.svg' %}" alt=""></a>
+                </div>
+            </div>
+        </section>
+        <section class="Courses-Description">
+            <div class="CourseHead">
+                <div class="Button">
+                    <a href="">Description</a>
+                </div>
+                <div class="Button">
+                    <a href="">Instructor</a>
+                </div>
+                <div class="Button">
+                    <a href="">Syllabus</a>
+                </div>
+                <div class="Button">
+                    <a href="">Reviews</a>
+                </div>
+            </div>
+            <div class="CoursesDescription">
+                <h4>Course Description</h4>
+                <p>This interactive e-learning course will introduce you to User Experience (UX) design, the art of creating products and services that are intuitive, enjoyable, and user-friendly.
+                     Gain a solid foundation in UX principles and learn to apply them in real-world scenarios through engaging modules and interactive exercises. 
+                </p>
+                <h4>Certification</h4>
+                <p>
+                    At Byway, we understand the significance of formal recognition for your hard work and dedication to continuous learning. Upon successful completion of our courses, you will earn a prestigious certification 
+                    that not only validates your expertise but also opens doors to new opportunities in your chosen field.
+                </p>
+            </div>
+            <div class="Instractor">
+                <h4>Instructor</h4>
+                {% for course in courses %}
+                <h4>{{ course.auther }}</h4>
+                <p>UI/UX Designer</p>
+                <div class="InstructorCard">
+                    <div class="left">
+                        <img src="{{ course.autherImg.url }}" alt="">
+                    </div>
+                    {% endfor %}
+                    <div class="right">
+                        <div class="icon">
+                            <img src="{% static './images/achive.svg' %}" alt="">
+                            <p>40,445 Reviews</p>
+                        </div>
+                        <div class="icon">
+                            <img src="{% static './images/cap.svg' %}" alt="">
+                            <p>500 Students</p>
+                        </div>
+                        <div class="icon">
+                            <img src="{% static './images/play.svg' %}" alt="">
+                            <p>15 Courses</p>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                    With over a decade of industry experience, Ronald brings a wealth of practical knowledge to the classroom. He has played a pivotal role in designing user-centric
+                    interfaces for renowned tech companies, ensuring seamless and engaging user experiences.
+                </p>
+            </div>
+            <div class="Sylabus">
+                    <h4>Syllabus</h4>
+                    <div class="Dropdown">
+                        <div class="left">
+                            <a href="">
+                                <img src="{% static './images/arrow-down.svg' %}" alt="">
+                                <h5>Introduction to UX Design</h5>
+                            </a>
+                        </div>
+                        <div class="right">
+                            <span>5 Lessons</span>
+                            <span>1 hour</span>
+                        </div>
+                    </div>
+                    <div class="Dropdown">
+                        <div class="left">
+                            <a href="">
+                                <img src="{% static './images/arrow-down.svg' %}" alt="">
+                                <h5>Basics of User-Centered Design</h5>
+                            </a>
+                        </div>
+                        <div class="right">
+                            <span>5 Lessons</span>
+                            <span>1 hour</span>
+                        </div>
+                    </div>
+                    <div class="Dropdown">
+                        <div class="left">
+                            <a href="">
+                                <img src="{% static './images/arrow-down.svg' %}" alt="">
+                                <h5>Elements of User Experience</h5>
+                            </a>
+                        </div>
+                        <div class="right">
+                            <span>5 Lessons</span>
+                            <span>1 hour</span>
+                        </div>
+                    </div>
+                    <div class="Dropdown">
+                        <div class="left">
+                            <a href="">
+                                <img src="{% static './images/arrow-down.svg' %}" alt="">
+                                <h5>Visual Design Principles</h5>
+                            </a>
+                        </div>
+                        <div class="right">
+                            <span>5 Lessons</span>
+                            <span>1 hour</span>
+                        </div>
+                    </div>
+            </div>
+        </section>
+        <section class="Review">
+            <h1>Learner Reviews</h1>
+            <div class="Container">
+                <div class="Left">
+                    <div class="rate">
+                        <img src="{% static './images/star.svg' %}" alt="star">
+                        <h2>4.6</h2>
+                        <span>146,951 reviews</span>
+                    </div>
+                    <img src="{% static './images/star.svg' %}" alt="">
+                </div>
+                <div class="Right">
+                    <div class="ReviewCard">
+                        <div class="LeftItem">
+                            <img src="{% static './images/span-6.svg' %}" alt="">
+                            <h5>Mark Doe</h5>
+                        </div>
+                        <div class="RightItem">
+                            <div class="ItemHead">
+                                <img src="{% static './images/star.svg' %}" alt="">
+                                <h5>5</h5>
+                                <span>Reviewed on 22nd March, 2024</span>
+                            </div>
+                            <p>
+                                I was initially apprehensive, having no prior design experience. But the instructor, John Doe, did an amazing job of breaking down complex concepts into easily digestible modules.
+                                The video lectures were engaging, and the real-world examples really helped solidify my understanding.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="ReviewCard">
+                        <div class="LeftItem">
+                            <img src="{% static './images/span-6.svg' %}" alt="">
+                            <h5>Mark Doe</h5>
+                        </div>
+                        <div class="RightItem">
+                            <div class="ItemHead">
+                                <img src="{% static './images/star.svg' %}" alt="">
+                                <h5>5</h5>
+                                <span>Reviewed on 22nd March, 2024</span>
+                            </div>
+                            <p>
+                                I was initially apprehensive, having no prior design experience. But the instructor, John Doe, did an amazing job of breaking down complex concepts into easily digestible modules.
+                                The video lectures were engaging, and the real-world examples really helped solidify my understanding.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="ReviewCard">
+                        <div class="LeftItem">
+                            <img src="{% static './images/span-6.svg' %}" alt="">
+                            <h5>Mark Doe</h5>
+                        </div>
+                        <div class="RightItem">
+                            <div class="ItemHead">
+                                <img src="{% static './images/star.svg' %}" alt="">
+                                <h5>5</h5>
+                                <span>Reviewed on 22nd March, 2024</span>
+                            </div>
+                            <p>
+                                I was initially apprehensive, having no prior design experience. But the instructor, John Doe, did an amazing job of breaking down complex concepts into easily digestible modules.
+                                The video lectures were engaging, and the real-world examples really helped solidify my understanding.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <a href="">View more Reviews</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="Quotes-Cards">
+            <div class="Card-Header">
+              <div class="left">
+                <h3>What Our Customer Say About Us</h3>
+              </div>
+              <div class="right">
+                <!-- Carousel Navigation Buttons -->
+                <div class="arrow">
+                  <a href="#quotesCarousel" role="button" data-bs-slide="prev">
+                    <img src="{% static './images/short-arrow-left.svg' %}" alt="">
+                  </a>
+                </div>
+                <div class="arrow">
+                  <a href="#quotesCarousel" role="button" data-bs-slide="next">
+                    <img src="{% static './images/short-arrow-right.svg' %}" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Bootstrap Carousel -->
+            <div id="quotesCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <!-- First Slide -->
+                <div class="carousel-item active">
+                  <div class="Quotes">
+                    <!-- Group of 3 Cards -->
+                    <div class="Item-Card">
+                      <img src="{% static './images/quotes.svg' %}" alt="">
+                      <p>"Byway's tech courses are top-notch! As someone who's always looking to stay ahead in the rapidly evolving tech world, I appreciate the up-to-date content and engaging multimedia."</p>
+                      <div class="Card-Bottom">
+                        <div class="Bottom-Image">
+                          <img src="{% static './images/span-7.svg' %}" alt="">
+                        </div>
+                        <div class="Card-bottomText">
+                          <h5>John Doe</h5>
+                          <span>Designer</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="Item-Card">
+                      <img src="{% static './images/quotes.svg' %}" alt="">
+                      <p>"Byway's tech courses are top-notch! As someone who's always looking to stay ahead in the rapidly evolving tech world, I appreciate the up-to-date content and engaging multimedia."</p>
+                      <div class="Card-Bottom">
+                        <div class="Bottom-Image">
+                          <img src="{% static './images/span-7.svg' %}" alt="">
+                        </div>
+                        <div class="Card-bottomText">
+                          <h5>John Doe</h5>
+                          <span>Designer</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="Item-Card">
+                      <img src="{% static './images/quotes.svg' %}" alt="">
+                      <p>"Byway's tech courses are top-notch! As someone who's always looking to stay ahead in the rapidly evolving tech world, I appreciate the up-to-date content and engaging multimedia."</p>
+                      <div class="Card-Bottom">
+                        <div class="Bottom-Image">
+                          <img src="{% static './images/span-7.svg' %}" alt="">
+                        </div>
+                        <div class="Card-bottomText">
+                          <h5>John Doe</h5>
+                          <span>Designer</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Second Slide -->
+                <div class="carousel-item">
+                  <div class="Quotes">
+                    <!-- Another group of 3 cards -->
+                    <div class="Item-Card">
+                      <img src="{% static './images/quotes.svg' %}" alt="">
+                      <p>"Byway's tech courses are top-notch! As someone who's always looking to stay ahead in the rapidly evolving tech world, I appreciate the up-to-date content and engaging multimedia."</p>
+                      <div class="Card-Bottom">
+                        <div class="Bottom-Image">
+                          <img src="{% static './images/span-7.svg' %}" alt="">
+                        </div>
+                        <div class="Card-bottomText">
+                          <h5>John Doe</h5>
+                          <span>Designer</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="Item-Card">
+                      <img src="{% static './images/quotes.svg' %}" alt="">
+                      <p>"Byway's tech courses are top-notch! As someone who's always looking to stay ahead in the rapidly evolving tech world, I appreciate the up-to-date content and engaging multimedia."</p>
+                      <div class="Card-Bottom">
+                        <div class="Bottom-Image">
+                          <img src="{% static './images/span-7.svg' %}" alt="">
+                        </div>
+                        <div class="Card-bottomText">
+                          <h5>John Doe</h5>
+                          <span>Designer</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="Item-Card">
+                      <img src="{% static './images/quotes.svg' %}" alt="">
+                      <p>""Byway's tech courses are top-notch! As someone who's always looking to stay ahead in the rapidly evolving tech world, I appreciate the up-to-date content and engaging multimedia."</p>
+                      <div class="Card-Bottom">
+                        <div class="Bottom-Image">
+                          <img src="{% static './images/span-7.svg' %}" alt="">
+                        </div>
+                        <div class="Card-bottomText">
+                          <h5>John Doe</h5>
+                          <span>Designer</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+       
+        <section id="Categories">
+        <section class="Courses">
+            <div class="Course-header">
+              <h3>More Courses Like This</h3>
+              <a class="Button" href="courses">See all</a>
+            </div>
+            <div class="Course-Card">
+              <div class="Item-Card">
+                <img src="{% static './images/bg.jpg' %}" alt="Course Image" class="CourseImage">
+                <h5>Beginner’s Guide to Design</h5>
+                <span>By Ronald Richards</span>
+                <div class="rating">
+                  <div class="left">
+                    <img src="{% static './images/star.svg' %}" alt="Star Icon" class="Icon">
+                    <img src="{% static './images/star.svg' %}" alt="Star Icon" class="Icon">
+                    <img src="{% static './images/star.svg' %}" alt="Star Icon" class="Icon">
+                    <img src="{% static './images/star.svg' %}" alt="Star Icon" class="Icon">
+                    <img src="{% static './images/star.svg' %}" alt="Star Icon" class="Icon">
+                    <img src="{% static './images/star.svg' %}" alt="Star Icon" class="Icon">
+                  </div>
+                  <div class="right">
+                    <p>(1200 Ratings)</p>
+                  </div>
+                </div>
+                <span>22 Total Hours. 155 Lectures. Beginner</span>
+                <h4>$149.9</h4>
+              </div>
+              <div class="Item-Card">
+                <img src="{% static './images/bg.jpg' %}" alt="Course Image" class="CourseImage">
+                <h5>Beginner’s Guide to Design</h5>
+                <span class="author">By Ronald Richards</span>
+                <div class="rating">
+                  <div class="left">
+                    <img src="{% static './images/star.svg' %}" alt="Star Icon" class="Icon">
+                    <img src="{% static './images/star.svg' %}" alt="Star Icon" class="Icon">
+                    <img src="{% static './images/star.svg' %}" alt="Star Icon" class="Icon">
+                    <img src="{% static './images/star.svg' %}" alt="Star Icon" class="Icon">
+                    <img src="{% static './images/star.svg' %}" alt="Star Icon" class="Icon">
+                    <img src="{% static './images/star.svg' %}" alt="Star Icon" class="Icon">
+                  </div>
+                  <div class="right">
+                    <p>(1200 Ratings)</p>
+                  </div>
+                </div>
+                <span>22 Total Hours. 155 Lectures. Beginner</span>
+                <h4>$149.9</h4>
+              </div>
+              <div class="Item-Card">
+                <img src="{% static './images/bg.jpg' %}" alt="Course Image" class="CourseImage">
+                <h5>Beginner’s Guide to Design</h5>
+                <span>By Ronald Richards</span>
+                <div class="rating">
+                  <div class="left">
+                    <img src="{% static './images/star.svg' %}" alt="Star Icon" class="Icon">
+                    <img src="{% static './images/star.svg' %}" alt="Star Icon" class="Icon">
+                    <img src="{% static './images/star.svg' %}" alt="Star Icon" class="Icon">
+                    <img src="{% static './images/star.svg' %}" alt="Star Icon" class="Icon">
+                    <img src="{% static './images/star.svg' %}" alt="Star Icon" class="Icon">
+                    <img src="{% static './images/star.svg' %}" alt="Star Icon" class="Icon">
+                  </div>
+                  <div class="right">
+                    <p>(1200 Ratings)</p>
+                  </div>
+                </div>
+                <span>22 Total Hours. 155 Lectures. Beginner</span>
+                <h4>$149.9</h4>
+              </div>
+              <div class="Item-Card">
+                <img src="{% static './images/bg.jpg' %}" alt="Course Image" class="CourseImage">
+                <h5>Beginner’s Guide to Design</h5>
+                <span>By Ronald Richards</span>
+                <div class="rating">
+                  <div class="left">
+                    <img src="{% static './images/star.svg' %}" alt="Star Icon" class="Icon">
+                    <img src="{% static './images/star.svg' %}" alt="Star Icon" class="Icon">
+                    <img src="{% static './images/star.svg' %}" alt="Star Icon" class="Icon">
+                    <img src="{% static './images/star.svg' %}" alt="Star Icon" class="Icon">
+                    <img src="{% static './images/star.svg' %}" alt="Star Icon" class="Icon">
+                    <img src="{% static './images/star.svg' %}" alt="Star Icon" class="Icon">
+                  </div>
+                  <div class="right">
+                    <p>(1200 Ratings)</p>
+                  </div>
+                </div>
+                <span>22 Total Hours. 155 Lectures. Beginner</span>
+                <h4>$149.9</h4>
+              </div>
+            </div>
+          </section>
+        </section>
+    </section>
+    <section id="Footer">
+        <section class="Footer-section">
+          <div class="LogoName">
+            <div class="top">
+              <a href="./home.html">
+                <img src="{% static './images/image 4.svg' %}" alt="">
+              </a>
+            </div>
+         
+            <div class="bottom">
+              <span>Empowering learners through accessible and engaging online education.
+              Byway is a leading online learning
+              platform dedicated to providing high-quality, flexible, and affordable educational experiences. </span>
+            </div>
+          </div>
+          <div class="help">
+            <h5>Get Help</h5>
+            <a href="" class="button-Text">Contact Us</a>
+            <a href="" class="button-Text">Latest Articles</a>
+            <a href="" class="button-Text">FAQ</a>
+          </div>
+          <div class="help">
+            <h5>Programs</h5>
+            <a href="" class="button-Text">Art & Design</a>
+            <a href="" class="button-Text">Business</a>
+            <a href="" class="button-Text">IT & Software</a>
+            <a href="" class="button-Text">Languages</a>
+            <a href="" class="button-Text">Programming</a>
+          </div>
+          <div class="help">
+            <h5>Contact Us</h5>
+            <a href="" class="button-Text">Address: 123 Main Street, Anytown, CA 12345</a>
+            <a href="" class="button-Text">Tel: +(123) 456-7890</a>
+            <a href="" class="button-Text">Mail: bywayedu@webkul.in</a>
+            <a href="https://www.facebook.com/" class="image">
+              <img src="{% static './images/image 3.svg' %}" alt="scial-medias" class="social">
+            </a>
+          </div>
+        </section>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{% static './js/script.js' %}"></script>
+</body>
+</html>

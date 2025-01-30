@@ -1,0 +1,1053 @@
+/* Reset some basic styles */
+body, html, div, section, a {
+    margin: 0;
+    padding: 0;
+}
+
+
+#wrapper {
+    width: 100%;
+}
+
+.Container {
+    margin: 0 auto;
+    padding: 0px  50px;
+}
+
+.header {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+
+}
+
+.header .left {
+}
+.header .logo{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    height: 40px;
+}
+.header .logo h6{
+    font-size: 16px;
+    font-weight: 500;
+    color: #64748B;
+}
+
+.header .right {
+    display: flex;
+    align-items: center;
+}
+
+.header .right a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+}
+.header .right a.J-Bg{
+    width: 30px;
+    height: 30px;
+    border-radius:15px;
+    color: #fff;
+    background: #334155;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.right .Login, .header .right .signup {
+    padding: 10px 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.header .right .Login:hover, .header .right .signup:hover {
+    background: #333;
+    color: #fff;
+}
+
+.header .right .signup {
+    background: #f4f4f4;
+    color: #333;
+}
+
+.header .right .signup:hover {
+    background: #333;
+    color: #fff;
+}
+section.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:40px;
+    margin-bottom: 20px;
+}
+section.content div.left {
+    width:500px;
+}
+section.content div.left h1{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+}
+section.content div.left p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25.6px;
+}
+section.content div.left a.button{
+    display: block;
+    width: max-content;
+    padding:10px 24px;
+    background: #3B82F6;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color:#fff;
+    text-decoration: none;
+   
+    
+}
+section.content div.right{
+    margin-right: 40px;
+}
+#count{}
+#count div.Container {
+    background: #F8FAFC;
+    height: auto; 
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 10px 40px; 
+}
+
+#count div.Container div.Number {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 4px dotted  #E2E8F0;
+    padding-right: 100px; 
+}
+#count div.Container div.Number:last-child{
+    padding-right: 0;
+    border-right: none;
+}
+
+#count div.Container div.Number h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #0F172A;
+    margin: 0; 
+}
+
+#count div.Container div.Number p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #0F172A;
+    margin: 0; 
+    padding-top: 5px;
+}
+section#Categories{
+}
+
+section#Categories section.Cards{}
+section#Categories section.Cards div.header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: none;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+section#Categories section.Cards div.header h3{
+    font-size: 24px;
+    font-weight: 600;
+    color: #0F172A;
+}
+section#Categories section.Cards div.header a.Button{
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #3B82F6;
+}
+section#Categories section.Cards div.Courses{
+    display: flex;
+    justify-content: space-between;
+}
+section#Categories section.Cards div.Courses div.Category-card{
+    padding: 20px 60px;
+    box-shadow: 0px 0px 8px 0px #3B82F61F;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    cursor: pointer;
+}
+section#Categories section.Cards div.Courses div.Category-card h4{
+    font-size: 20px;
+    font-weight: 600;
+    color:  #0F172A;
+    margin: 0;
+}
+section#Categories section.Cards div.Courses div.Category-card p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #0F172A;
+    margin-top: 10px;
+}
+section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background:  #E0F2FE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#Categories section.Courses{
+
+}
+#Categories section.Courses div.Course-header{
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    align-items: center;
+
+}
+#Categories section.Courses div.Course-header h3{
+    font-size: 24px;
+    font-weight: 600;
+}
+#Categories section.Courses div.Course-header a.Button{
+    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #3B82F6;
+
+ 
+}
+#Categories section.Courses div.Course-Card{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+#Categories section.Courses div.Course-Card div.Item-Card{
+    box-shadow: 0px 0px 8px 0px #3B82F61F;
+    border: 1px solid #E2E8F0;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+#Categories section.Courses div.Course-Card div.Item-Card h5{
+    font-size: 18px;
+    font-weight: 600;
+    color:#0F172A;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#Categories section.Courses div.Course-Card div.Item-Card span.author{
+    font-size: 14px;
+    font-weight: 400;
+    color: #334155;
+
+
+}
+#Categories section.Courses div.Course-Card div.Item-Card div.rating{
+    width: 220px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#Categories section.Courses div.Course-Card div.Item-Card div.rating div.right p{
+    font-size: 12px;
+    font-weight: 600;
+    color:#334155;
+}
+#Categories section.Courses div.Course-Card div.Item-Card span{
+    font-size: 14px;
+    font-weight: 400;
+    color: #334155;
+}
+#Categories section.Courses div.Course-Card div.Item-Card h4{
+    font-size: 20px;
+    font-weight: 600;
+    color: #0F172A;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+#Categories section.Courses div.Course-Card div.Item-Card div.rating-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#Categories section.Courses div.Course-Card div.Item-Card div.rating-1 div.left div.Ins-Image{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#Categories section.Courses div.Course-Card div.Item-Card div.rating div.left div.Ins-Image img.Icon{
+}
+#Categories section.Courses div.Course-Card div.Item-Card div.rating-1 div.left div.Ins-Image p{
+  margin-left: 5px;
+}
+#Quotes-Cards{
+    background:  #F8FAFC;
+    margin-top: 40px;
+
+}
+#Quotes-Cards div.Card-Header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+}
+#Quotes-Cards div.Card-Header div.left{
+    width: 300px;
+
+}
+#Quotes-Cards div.Card-Header div.left h3{
+    font-size: 24px;
+    font-weight: 600;
+    color: #000000;
+}
+#Quotes-Cards div.Card-Header div.right{
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+#Quotes-Cards div.Card-Header div.right div.arrow{
+    width: 50px;
+    height: 40px;
+    border-radius: 8px;
+    background: #94A3B8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#Quotes-Cards div.Card-Header div.right div.arrow img{
+    color:#fff;
+    padding: 10px;
+}
+#Quotes-Cards div.Quotes{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 50px;
+}
+#Quotes-Cards div.Quotes div.Item-Card{
+    width: 400px;
+    box-shadow: 0px 0px 8px 0px #3B82F61F;
+    border: 1px solid  #E2E8F0;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 40px;
+}
+#Quotes-Cards div.Quotes div.Item-Card p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    
+
+}
+#Quotes-Cards div.Quotes div.Item-Card div.Card-Bottom{
+    width: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+#Quotes-Cards div.Quotes div.Item-Card div.Card-Bottom div.Bottom-Image{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+}
+#Quotes-Cards div.Quotes div.Item-Card div.Card-Bottom div.Bottom-Image img{
+    
+}
+#Quotes-Cards div.Quotes div.Item-Card div.Card-bottomText{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+#Quotes-Cards div.Quotes div.Item-Card div.Card-bottomText h5{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+#Quotes-Cards div.Quotes div.Item-Card div.Card-bottomText span{
+    font-size: 14px;
+    font-weight: 400;
+    color: #334155;
+}
+
+#Instruction{}
+#Instruction div.Instructor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:50px 200px ;
+}
+#Instruction div.Instructor div.left{
+
+}
+#Instruction div.Instructor div.right{
+    width: 500px;
+}
+#Instruction div.Instructor div.right h4{
+    font-size: 20px;
+    font-weight: 600;
+    color: #000000;
+}
+#Instruction div.Instructor div.right p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #1D2939;
+}
+#Instruction div.Instructor div.right a.longButton{
+    width: max-content;
+    padding: 10px 24px;
+    border-radius: 8px;
+    background: #020617;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+#Instruction div.Instructor div.right a.longButton img{
+    margin-left: 10px;
+}
+#Instruction div.Instructor div.right a.longButton-1{
+    width: max-content;
+    padding: 10px 24px;
+    border-radius: 8px;
+    background: #020617;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+#Instruction div.Instructor div.right a.longButton-1 img{
+    margin-left: 10px;
+}
+#Footer{
+    background: #1E293B;
+    margin-top: 50px;
+}
+#Footer  .Footer-section{
+    padding-top: 50px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+#Footer  .Footer-section .LogoName {
+}
+#Footer  .Footer-section .LogoName div.top{
+    width: 80px;
+    margin-bottom: 10px;
+}
+#Footer  .Footer-section .LogoName div.top img{
+    width: 100%;
+}
+#Footer  .Footer-section .LogoName div.bottom{
+     width: 300px;
+
+}
+#Footer  .Footer-section .LogoName div.bottom span{
+    font-size: 14px;
+    font-weight: 400;
+    color:  #CBD5E1;
+}
+#Footer  .Footer-section .help{
+    display: flex;
+    flex-direction: column;
+}
+#Footer  .Footer-section .help h5{
+    font-size: 18px;
+    font-weight: 600;
+    color: #F1F5F9;
+    margin-bottom: 10px;
+}
+#Footer  .Footer-section .help a.button-Text{
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #CBD5E1;
+    margin-bottom: 5px;
+
+}
+#Footer  .Footer-section .help img.social{
+    margin-top: 10px;
+    width: 200px;
+}
+.Container section.Spotlight {
+    display: flex;
+    justify-content: space-between;
+    background-color: #F8FAFC;
+    margin-top: 20PX;
+    position: relative;
+    
+}
+
+.Spotlight .left {
+    max-width: 700px;
+}
+
+.Spotlight .Top {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}
+.Spotlight .Top a{
+    text-decoration: none;
+}
+.Spotlight .Top a span{
+    color: #334155;
+    font-size: 14px;
+    font-weight: 500;
+}
+.Spotlight .Top span.Diff{
+    color: #2563EB;
+}
+
+.Spotlight .Top img {
+    margin: 0 10px;
+    width: 12px;
+    height: 12px;
+}
+
+.Spotlight h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #0F172A;
+}
+
+.Spotlight p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.Spotlight .Bottom {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.Spotlight .Bottom .Rating {
+    font-weight: 500;
+    color:  #FEC84B;
+    margin-right: 5px;
+}
+
+.Spotlight .Bottom img {
+    width: 100px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.Spotlight .Author,
+.Spotlight .Language {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.Spotlight .Author img{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    margin-right: 10px;
+}
+.Spotlight .Language img {
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+.Spotlight .Author a {
+    color: #2563EB;
+    text-decoration: none;
+    font-weight: bold;
+}
+.Spotlight .right{
+    box-shadow: 0px 0px 8px 0px #3B82F61F;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 20px;
+    position: absolute;
+    left: 70%;
+
+}
+.Spotlight .right img{
+    width: 100%;
+}
+.Spotlight .right .Price{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.Spotlight .right .Price h3{
+    font-size: 24px;
+    font-weight: 600;
+    color:  #0F172A;
+}
+.Spotlight .right .Price h5{
+    font-size: 18px;
+    font-weight: 600;
+    color:  #0F172A;
+    opacity:0.4;
+    text-decoration-line: line-through;
+}
+.Spotlight .right .Price h4{
+    font-size: 20px;
+    font-weight: 600;
+    color:  #16A34A;
+}
+.Spotlight .right div.Spotlight-Button{
+    display: flex;
+    flex-direction: column;
+
+}
+.Spotlight .right div.Spotlight-Button a.spotlightButton{
+    padding: 10px 24px;
+    border-radius: 8px;
+    background: #020617;
+    color: #fff;
+    margin-bottom: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+
+}
+.Spotlight .right div.Spotlight-Button a.spotlightButton:nth-child(2){
+    border:1px solid  #020617;
+    background: transparent;
+    color: #0F172A;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.Spotlight .right div.Share{
+    padding: 0px 20px;
+    border-top: 1px dotted  #E2E8F0;
+    margin-top: 20px;
+}
+.Spotlight .right div.Share p{
+    font-size: 16px;
+    font-weight: 500;
+    color: #0F172A;
+    margin-bottom: 10px;
+}
+.Spotlight .right div.Share a{}
+.Spotlight .right div.Share a img{}
+.Courses-Description{
+    margin-top: 20px;
+    border-bottom: 1px solid #E2E8F0;
+}
+.Courses-Description div.CourseHead{
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #E2E8F0;
+    height: 100px;
+}
+.Courses-Description div.CourseHead div.Button{
+    padding: 10px 25px;
+    border-radius: 8px;
+    border:1px solid #E2E8F0;
+    height: max-content;
+}
+.Courses-Description div.CourseHead div.Button a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    color:  #0F172A;
+
+}
+.Courses-Description div.CoursesDescription{
+    width: 800px;
+    border-bottom:1px solid #E2E8F0 ;
+}
+.Courses-Description div.CoursesDescription h4{
+    font-size: 20px;
+    font-weight: 600;
+    color:  #0F172A;
+}
+.Courses-Description div.CoursesDescription p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #334155;
+}
+.Courses-Description div.Instractor{
+    width: 600px;
+}
+.Courses-Description div.Instractor h4{
+    font-size: 20px;
+    font-weight: 600;
+}
+.Courses-Description div.Instractor h4:nth-child(2){
+    color: #2563EB;
+    margin-bottom: 0;
+}
+.Courses-Description div.Instractor p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #334155;
+    margin-top: 5px;
+}
+.Courses-Description div.Instractor div.InstructorCard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 350px;
+}
+.Courses-Description div.Instractor div.InstructorCard div.left{
+    margin-right: 10px;
+}
+.Courses-Description div.Instractor div.InstructorCard div.left img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+.Courses-Description div.Instractor div.InstructorCard div.right{
+ 
+
+}
+.Courses-Description div.Instractor div.InstructorCard div.right div.icon{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.Courses-Description div.Instractor div.InstructorCard div.right div.icon img{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+.Courses-Description div.Instractor div.InstructorCard div.right p{
+    margin: 0;
+}
+.Courses-Description div.Sylabus{
+    border-bottom: 1px solid #E2E8F0  ;
+}
+.Courses-Description div.Sylabus h4{
+    font-size: 20px;
+    font-weight: 600;
+}
+.Courses-Description div.Sylabus{}
+.Courses-Description div.Sylabus div.Dropdown{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #E2E8F0;
+    width: 700px;
+}
+.Courses-Description div.Sylabus div.Dropdown:last-child{
+    margin-bottom: 10px;
+}
+.Courses-Description div.Sylabus div.Dropdown div.left a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #0F172A;
+}
+.Courses-Description div.Sylabus div.Dropdown div.left a img{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.Courses-Description div.Sylabus div.Dropdown div.right{
+    margin-right: 10px;
+}
+.Courses-Description div.Sylabus div.Dropdown div.right span{
+    font-size: 14px;
+    font-weight: 400;
+    color: #334155;
+}
+.Review{}
+.Review h1{
+    font-size: 20px;
+    font-weight: 600;
+    color:  #0F172A;
+}
+.Review div.Container{
+    display: flex;
+    justify-content: space-between;
+}
+.Review div.Container div.Left{
+    width: 600px;
+}
+.Review div.Container div.Left div.rate{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+    height: 20px;
+    margin-bottom: 10px;
+}
+.Review div.Container div.Left div.rate img{
+    margin-right: 10px;
+}
+.Review div.Container div.Left div.rate h2{
+    font-size: 20px;
+    font-weight: 600;
+    color: #0F172A;
+}
+.Review div.Container div.Left div.rate span{
+    font-size: 14px;
+    font-weight: 500;
+    color: #334155;
+}
+.Review div.Container div.Right{
+    flex: 1;
+    margin-top: 20px;
+}
+.Review div.Container div.Right div.ReviewCard{
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.Review div.Container div.Right div.ReviewCard div.LeftItem{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 140px;
+} 
+.Review div.Container div.Right div.ReviewCard div.LeftItem h5{
+    font-size: 18px;
+    font-weight: 600;
+    color: #0F172A;
+}
+.Review div.Container div.Right div.ReviewCard div.RightItem{
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Review div.Container div.Right div.ReviewCard div.RightItem div.ItemHead{
+    display: flex;
+}
+.Review div.Container div.Right div.ReviewCard div.RightItem div.ItemHead h5{
+    margin: 0;
+    margin-right: 15px;
+    margin-left: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #0F172A;
+}
+.Review div.Container div.Right div.ReviewCard div.RightItem p{
+    font-size: 16px;
+    font-weight: 400;
+    color:   #334155;
+}
+.Review div.Container div.Right div.button{
+    padding:10px 24px;
+    border: 1px solid #0F172A ;
+    border-radius: 8px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.Review div.Container div.Right div.button a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #0F172A;
+}
+/* Align cards in a row */
+/* Ensure cards are displayed in a row */
+.Quotes {
+    display: flex;
+    
+    gap: 1rem;
+    justify-content: center;
+    align-items: stretch;
+  }
+  
+  /* Adjust carousel controls */
+  .arrow img {
+    cursor: pointer;
+  }
+
+  @media(max-width: 1440px) {
+    #Instruction div.Instructor{
+        padding:50px 0px;
+    }
+   
+  }
+  @media(max-width: 1300px){
+    .carousel-item .Quotes .Item-Card:last-child{
+        display: none;
+    }
+  
+  }
+  @media(max-width: 1220px){
+    #count div.Container div.Number{
+        padding-right: 50px;
+
+    }
+    #Footer .Footer-section{
+        padding-left: 0;
+        padding-right: 0;
+    }
+  }
+  @media(max-width: 1080px){
+    #wrapper .Container{
+        padding:0px 20px;
+    }
+  }
+  @media(max-width:980px){
+    #Instruction div.Instructor div.left {
+        display: none;
+    }
+    #count div.Container div.Number{
+        padding-right: 10px;
+    }
+    
+  }
+  @media(max-width:950px){
+    section#Categories section.Cards div.Courses{
+        flex-wrap: wrap;
+    }
+    section#Categories section.Cards div.Courses div.Category-card{
+        margin-bottom: 10px;
+    }
+    #count div.Container{
+        display: none;
+    }
+    #Footer .Footer-section{
+        flex-wrap: wrap;
+        align-items: center;
+
+    }
+    #Footer .Footer-section .help{
+        margin-top: 20px;
+    }
+
+  }
+  @media(max-width:767px){
+    section.content div.right{
+        display: none;
+    }
+    .carousel-item .Quotes .Item-Card:nth-child(2){
+        display: none;
+    }
+  }
+  @media(max-width: 1023px) {
+    /* Styles for tablets */
+    .Container {
+      padding: 30px;
+    }
+    .Spotlight .right{
+        display: none;
+    }
+    .Review .Container .Left{
+        display: none;
+    }
+    .Courses-Description div.CoursesDescription{
+        width: 100%;
+    }
+    .Review div.Container div.Right {
+        width: 100%;
+    }
+    .Review div.Container div.Right div.ReviewCard{
+        flex-direction: column;
+    }
+    .Review div.Container div.Right div.ReviewCard div.LeftItem{
+        flex-direction: column;
+    }
+
+  }
+@media(max-width:768px){
+    .Container{
+        padding:10px;
+    }
+    .Courses-Description div.CourseHead{
+        width: 100%;
+    }
+    .Courses-Description div.Sylabus div.Dropdown {
+        width: 100%;
+    }
+    .Review div.Container div.Right div.ReviewCard div.RightItem{
+        width: 100%;
+    }
+    .Courses-Description div.Instractor{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
