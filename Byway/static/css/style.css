@@ -5,24 +5,26 @@ body, html, div, section, a {
 }
 
 
-#wrapper {
+#Container {
     width: 100%;
 }
 
-.Container {
+.wrapper{
     margin: 0 auto;
-    padding: 0px  50px;
+    padding: 0px  ;
 }
 
 .header {
-    padding-top: 10px;
+    
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #000;
+    padding:10px 80px;
 
 }
 
 .header .left {
+    
 }
 .header .logo{
     text-decoration: none;
@@ -42,6 +44,7 @@ body, html, div, section, a {
 .header .right {
     display: flex;
     align-items: center;
+    
 }
 
 .header .right a {
@@ -87,8 +90,7 @@ section.content{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top:40px;
-    margin-bottom: 20px;
+    padding:40px 80px 20px 80px;
 }
 section.content div.left {
     width:500px;
@@ -106,7 +108,7 @@ section.content div.left p{
 section.content div.left a.button{
     display: block;
     width: max-content;
-    padding:10px 24px;
+    padding:10px 50px;
     background: #3B82F6;
     border-radius: 8px;
     font-size: 14px;
@@ -119,7 +121,9 @@ section.content div.left a.button{
 section.content div.right{
     margin-right: 40px;
 }
-#count{}
+#count{
+    margin-top: 100px;
+}
 #count div.Container {
     background: #F8FAFC;
     height: auto; 
@@ -159,7 +163,11 @@ section.content div.right{
 section#Categories{
 }
 
-section#Categories section.Cards{}
+section#Categories section.Cards{
+    margin-top: 80px;
+    padding: 0px 80px;
+
+}
 section#Categories section.Cards div.header{
     display: flex;
     justify-content: space-between;
@@ -167,6 +175,7 @@ section#Categories section.Cards div.header{
     align-items: center;
     margin-top: 20px;
     margin-bottom: 20px;
+    padding: 0;
 }
 section#Categories section.Cards div.header h3{
     font-size: 24px;
@@ -184,9 +193,10 @@ section#Categories section.Cards div.header a.Button{
 section#Categories section.Cards div.Courses{
     display: flex;
     justify-content: space-between;
+    
 }
 section#Categories section.Cards div.Courses div.Category-card{
-    padding: 20px 60px;
+    padding: 24px 94px;
     box-shadow: 0px 0px 8px 0px #3B82F61F;
     display: flex;
     flex-direction: column;
@@ -208,8 +218,8 @@ section#Categories section.Cards div.Courses div.Category-card p{
     margin-top: 10px;
 }
 section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     background:  #E0F2FE;
     display: flex;
@@ -218,6 +228,8 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
     margin-bottom: 10px;
 }
 #Categories section.Courses{
+    padding:0px 80px;
+    margin-top: 80px;
 
 }
 #Categories section.Courses div.Course-header{
@@ -244,21 +256,29 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 20px;
     
 }
 #Categories section.Courses div.Course-Card div.Item-Card{
     box-shadow: 0px 0px 8px 0px #3B82F61F;
     border: 1px solid #E2E8F0;
-    padding: 10px;
+    padding: 20px;
     border-radius: 8px;
     cursor: pointer;
+}
+#Categories section.Courses div.Course-Card div.Item-Card .Flex-Box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #Categories section.Courses div.Course-Card div.Item-Card h5{
     font-size: 18px;
     font-weight: 600;
     color:#0F172A;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 15px;
+
+    margin-bottom: 0;
+   
 }
 #Categories section.Courses div.Course-Card div.Item-Card span.author{
     font-size: 14px;
@@ -266,22 +286,29 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
     color: #334155;
 
 
+
 }
 #Categories section.Courses div.Course-Card div.Item-Card div.rating{
-    width: 220px;
+    
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
 }
+#Categories section.Courses div.Course-Card div.Item-Card div.rating .left{
+    margin-right: 10px;
+}
+#Categories section.Courses div.Course-Card div.Item-Card div.rating .right{}
 #Categories section.Courses div.Course-Card div.Item-Card div.rating div.right p{
     font-size: 12px;
     font-weight: 600;
     color:#334155;
+    margin: 0;
 }
 #Categories section.Courses div.Course-Card div.Item-Card span{
     font-size: 14px;
     font-weight: 400;
     color: #334155;
+    
 }
 #Categories section.Courses div.Course-Card div.Item-Card h4{
     font-size: 20px;
@@ -294,6 +321,9 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px;
+    border-top:1px solid #E2E8F0;
+    margin-top: 15px;
 }
 #Categories section.Courses div.Course-Card div.Item-Card div.rating-1 div.left div.Ins-Image{
     display: flex;
@@ -303,7 +333,12 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
 #Categories section.Courses div.Course-Card div.Item-Card div.rating div.left div.Ins-Image img.Icon{
 }
 #Categories section.Courses div.Course-Card div.Item-Card div.rating-1 div.left div.Ins-Image p{
-  margin-left: 5px;
+    margin: 0;
+    margin-left: 5px;
+}
+#Categories section.Courses div.Course-Card div.Item-Card div.rating-1 div.right{}
+#Categories section.Courses div.Course-Card div.Item-Card div.rating-1 div.right p{
+    margin: 0;
 }
 #Quotes-Cards{
     background:  #F8FAFC;
@@ -314,7 +349,7 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 100px;
+    padding: 80px 80px 20px 80px;
 }
 #Quotes-Cards div.Card-Header div.left{
     width: 300px;
@@ -348,7 +383,7 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 50px;
+    margin-left: 80px;
 }
 #Quotes-Cards div.Quotes div.Item-Card{
     width: 400px;
@@ -356,7 +391,7 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
     border: 1px solid  #E2E8F0;
     border-radius: 16px;
     padding: 24px;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
 }
 #Quotes-Cards div.Quotes div.Item-Card p{
     font-size: 16px;
@@ -410,6 +445,7 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
     justify-content: space-between;
     align-items: center;
     padding:50px 200px ;
+    padding-bottom:0px;
 }
 #Instruction div.Instructor div.left{
 
@@ -477,7 +513,7 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
     margin-bottom: 10px;
 }
 #Footer  .Footer-section .LogoName div.top img{
-    width: 100%;
+    width: 100px;
 }
 #Footer  .Footer-section .LogoName div.bottom{
      width: 300px;
@@ -508,7 +544,7 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
 }
 #Footer  .Footer-section .help img.social{
     margin-top: 10px;
-    width: 200px;
+    width: 300px;
 }
 .Container section.Spotlight {
     display: flex;
@@ -921,9 +957,16 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
   }
 
   @media(max-width: 1440px) {
-    #Instruction div.Instructor{
-        padding:50px 0px;
+    section#Categories section.Cards div.Courses {
+        flex-wrap: wrap;
     }
+    section#Categories section.Cards div.Courses .Category-card{
+        margin-bottom: 10px;
+    }
+    #Instruction div.Instructor {
+        padding:50px 100px;
+    }
+
    
   }
   @media(max-width: 1300px){
@@ -948,6 +991,28 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
     }
   }
   @media(max-width:980px){
+    .header{
+        padding:10px 20px;
+    }
+    section.content {
+        padding:20px;
+    }
+    section#Categories section.Cards{
+        padding: 0px 20px;
+    }
+    #Categories section.Courses {
+        padding:0px 20px;
+    }
+    #Quotes-Cards div.Card-Header {
+        padding: 20px;
+        padding-top:80px;
+    }
+    #Quotes-Cards div.Quotes {
+        margin-left: 20px;
+    }
+    #Instruction div.Instructor{
+        padding:50px 20px;
+    }
     #Instruction div.Instructor div.left {
         display: none;
     }
@@ -957,9 +1022,7 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
     
   }
   @media(max-width:950px){
-    section#Categories section.Cards div.Courses{
-        flex-wrap: wrap;
-    }
+    
     section#Categories section.Cards div.Courses div.Category-card{
         margin-bottom: 10px;
     }
@@ -986,9 +1049,7 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
   }
   @media(max-width: 1023px) {
     /* Styles for tablets */
-    .Container {
-      padding: 30px;
-    }
+    
     .Spotlight .right{
         display: none;
     }
@@ -1010,9 +1071,6 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
 
   }
 @media(max-width:768px){
-    .Container{
-        padding:10px;
-    }
     .Courses-Description div.CourseHead{
         width: 100%;
     }
@@ -1026,6 +1084,71 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
         width: 100%;
     }
 }
+@media(max-width:320px){
+    #Quotes-Cards{
+        display: flex;
+        flex-direction: column;
+        padding:10px;
+        align-items: center;
+    }
+    #Quotes-Cards div.Card-Header{
+        
+        flex-direction: column;
+    }
+    #Quotes-Cards div.Card-Header .left h3{
+        margin-bottom: 20px;
+
+    }
+    #Quotes-Cards div.Quotes {
+        margin-left: 0;
+    }
+    #Quotes-Cards div.Quotes div.Item-Card {
+        align-self: center;
+        width:100%;
+    }
+}
+@media(max-width:840px){
+    #Footer .Footer-section {
+        flex-direction:column;
+        align-items: center;
+    }
+    section.content div.right {
+        display: none;
+    }
+}
+@media(max-width:380px){
+    .header .right .signup{
+        display: none;
+    }
+    .header{
+        padding:10px 0px;
+    }
+    section.content {
+        padding:0px;
+    }
+    section#Categories section.Cards{
+        padding: 0px ;
+    }
+    #Categories section.Courses {
+        padding:0px;
+    }
+    #Quotes-Cards div.Card-Header {
+        padding: 0px;
+        padding-top:40px;
+    }
+    #Quotes-Cards div.Quotes {
+        margin-left: 0px;
+    }
+    #Instruction div.Instructor{
+        padding:50px 0px;
+    }
+}
+@media(max-width:1052px){
+    section#Categories section.Cards div.Courses div.Category-card{
+        width:300px;
+    }
+}
+
 
 
 
